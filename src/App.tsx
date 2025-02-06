@@ -17,6 +17,16 @@ import {
 import Navbar from "./components/Navbar";
 import { useInView } from "react-intersection-observer";
 
+
+  const handleDownload = () => {
+    const resumeUrl = "/Resume.pdf"; // Path to the file in the public folder
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "Muhammad_Adeel_Resume.pdf"; // Name of the downloaded file
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 function App() {
   const [skillsRef, skillsInView] = useInView({
     triggerOnce: true,
@@ -88,13 +98,14 @@ function App() {
               </a>
             </div>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-black px-8 py-3 rounded-full font-semibold flex items-center mx-auto lg:mx-0 hover:bg-gray-200 transition-colors"
-            >
-              <Download className="mr-2" size={20} />
-              Download Resume
-            </motion.button>
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-white text-black px-8 py-3 rounded-full font-semibold flex items-center mx-auto lg:mx-0 hover:bg-gray-200 transition-colors"
+      onClick={handleDownload}
+    >
+      <Download className="mr-2" size={20} />
+      Download Resume
+    </motion.button>
           </motion.div>
           {/* Left Side - Image */}
           <div className="w-full lg:w-1/2 flex justify-center">
