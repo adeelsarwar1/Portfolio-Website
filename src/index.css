@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-black text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-center mb-16;
+  }
+
+  .card {
+    @apply bg-gray-900 p-8 rounded-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-xl;
+  }
+
+  .btn {
+    @apply px-8 py-3 rounded-full font-semibold transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply btn bg-white text-black hover:bg-gray-200 hover:scale-105;
+  }
+
+  .nav-link {
+    @apply text-gray-800 hover:text-gray-600 transition-colors relative;
+  }
+
+  .nav-link-active {
+    @apply font-semibold;
+  }
+
+  .tech-icon {
+    @apply w-20 h-20 mb-4 p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .social-link {
+    @apply text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-300;
+  }
+}
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full hover:bg-gray-600;
+}
