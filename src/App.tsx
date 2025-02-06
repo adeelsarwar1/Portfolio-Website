@@ -75,7 +75,7 @@ function App() {
             </p>
             <div className="flex justify-center lg:justify-start space-x-6 mb-8">
               <a
-                href="https://github.com"
+                href="https://github.com/adeelsarwar1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-gray-300"
@@ -91,7 +91,7 @@ function App() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:adeel2694551@gmail.com"
                 className="text-white hover:text-gray-300"
               >
                 <Mail size={24} />

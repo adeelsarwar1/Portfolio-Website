@@ -73,7 +73,7 @@ const Navbar = () => {
             }}
             className="text-black font-bold text-xl"
           >
-            MA.
+            
           </a>
           
           {/* Desktop Menu */}
